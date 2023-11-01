@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div
+        <nav
           className="banner h-screen bg-cover bg-center"
           style={{ backgroundImage: "url(/images/banner-photo.png)" }}
         >
@@ -37,13 +37,16 @@ export default function RootLayout({
                   />
                   <span>Tu Carrito (0)</span>
                 </div>
-                <button className="py-6 px-8 bg-white/10">
+                <button className="py-5 px-8 bg-white/10">
                   Agenda una Cita
                 </button>
               </div>
             </div>
           </div>
-        </div>
+        </nav>
+        <nav className="navbar">
+          <div className="navs"></div>
+        </nav>
         {children}
       </body>
     </html>
