@@ -10,16 +10,21 @@ export default function Home() {
         <div className="top-bar py-5 border-b border-slate-600 flex justify-between items-center">
           <Image
             src={"/svg/logo-gold.svg"}
-            width={150}
-            height={150}
+            width={200}
+            height={200}
             alt={"Legality logo"}
           />
-          <div className="ctas flex gap-5 items-center">
-            <div className="cart-container">
-              <div className="cart-icon"></div>
+          <div className="ctas flex gap-8 items-center">
+            <div className="cart-container flex items-center gap-3">
+              <Image
+                src={"/images/CartIcon.png"}
+                width={30}
+                height={30}
+                alt={"CartIcon"}
+              />
               <span>Tu Carrito (0)</span>
             </div>
-            <button className="py-4 px-7 bg-white/10">Agenda una Cita</button>
+            <button className="py-6 px-8 bg-white/10">Agenda una Cita</button>
           </div>
         </div>
       </div>
