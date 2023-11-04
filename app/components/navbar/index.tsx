@@ -24,7 +24,7 @@ export default function Navbar() {
               <span>Tu Carrito (0)</span>
             </div>
           </div>
-          <button className="bg-white/30 px-7 py-5">Agenda una Cita</button>
+          <button className="bg-white/30 px-7 py-4">Agenda una Cita</button>
         </div>
       </nav>
       <nav className="bottom hidden md:flex justify-between items-center border-b border-slate-600 py-4">
