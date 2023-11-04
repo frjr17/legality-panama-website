@@ -1,6 +1,6 @@
 import { navbarNavs } from "@/app/lib";
-import Image from "next/image";
 import Link from "next/link";
+import CTA from "./cta";
 
 export default function Navbar() {
   return (
@@ -13,34 +13,18 @@ export default function Navbar() {
         ))}
       </div>
       <div className="ctas flex w-1/2 justify-end gap-10">
-        <div className="cta flex gap-2">
-          <Image
-            src={"/images/phone-icon.png"}
-            className="icon"
-            width={50}
-            height={50}
-            alt={"phone-icon"}
-          />
-          <div className="cta-content ">
-            <span className="label text-yellow-500 text-sm ">Llámanos Al:</span>
-            <p className="text leading-none text-lg">+507 6226-6183</p>
-          </div>
-        </div>
-        <div className="cta flex gap-2">
-          <Image
-            src={"/images/email-icon.png"}
-            className="icon"
-            width={50}
-            height={50}
-            alt={"phone-icon"}
-          />
-          <div className="cta-content ">
-            <span className="label text-yellow-500 text-sm ">
-              Escríbenos al Correo:
-            </span>
-            <p className="text leading-none text-lg">legality.pa@gmail.com</p>
-          </div>
-        </div>
+        <CTA
+          iconUrl="/images/phone-icon.png"
+          alt="phone-icon"
+          label="Llámanos al:"
+          text="+507 6226-6183"
+        />
+        <CTA
+          iconUrl="/images/email-icon.png"
+          alt="email-icon"
+          label="Escríbenos al Correo:"
+          text="legality.pa@gmail.com"
+        />
       </div>
     </nav>
   );
