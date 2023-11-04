@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
+import Link from "next/link";
+import { navbarNavs } from "./lib";
 
 export const metadata: Metadata = {
   title: "Legality Panama",
@@ -45,11 +47,15 @@ export default function RootLayout({
               </nav>
               <nav className="navbar flex items-center py-5 border-b border-slate-600">
                 <div className="navs flex w-1/2 justify-between">
-                  <div className="nav text-xl">Inicio</div>
-                  <div className="nav text-xl">Conócenos</div>
-                  <div className="nav text-xl">Servicios</div>
-                  <div className="nav text-xl">Blog</div>
-                  <div className="nav text-xl">Contáctanos</div>
+                  {navbarNavs.map((nav) => (
+                    <Link
+                      href={nav.href}
+                      key={nav.name}
+                      className="nav text-xl"
+                    >
+                      {nav.name}
+                    </Link>
+                  ))}
                 </div>
                 <div className="ctas flex w-1/2 justify-end gap-10">
                   <div className="cta flex gap-2">
