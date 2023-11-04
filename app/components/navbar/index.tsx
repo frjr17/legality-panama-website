@@ -14,12 +14,14 @@ export default function Navbar() {
       </div>
       <div className="ctas flex w-1/2 justify-end gap-10">
         <CTA
+          ctaRef="tel:+50762266183"
           iconUrl="/images/phone-icon.png"
           alt="phone-icon"
           label="Llámanos al:"
           text="+507 6226-6183"
         />
         <CTA
+          ctaRef="mailto:legality.pa@gmail.com"
           iconUrl="/images/email-icon.png"
           alt="email-icon"
           label="Escríbenos al Correo:"

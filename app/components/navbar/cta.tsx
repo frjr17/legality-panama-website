@@ -1,16 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export interface ICTAProps {
-  attributes?: any;
+  ctaRef?: string;
   iconUrl: string;
   alt: string;
   label: string;
   text: string;
 }
 
-export default function CTA(props: ICTAProps) {
+function Component(props: ICTAProps) {
   return (
-    <div {...props.attributes} className="cta cursor-pointer flex gap-2">
+    <div className="cta cursor-pointer flex gap-2">
       <Image
         src={props.iconUrl}
         className="icon"
@@ -23,5 +24,15 @@ export default function CTA(props: ICTAProps) {
         <p className="text leading-none text-lg">{props.text}</p>
       </div>
     </div>
+  );
+}
+
+export default function CTA(props: ICTAProps) {
+  return props.ctaRef ? (
+    <Link href={props.ctaRef}>
+      <Component {...props} />
+    </Link>
+  ) : (
+    <Component {...props} />
   );
 }
