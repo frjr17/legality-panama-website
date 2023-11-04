@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import Topbar from "./components/topbar";
+import Navbar from "./components/navbar";
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
-import { navbarNavs } from "./lib";
 
 export const metadata: Metadata = {
   title: "Legality Panama",
@@ -23,77 +22,8 @@ export default function RootLayout({
         >
           <div className=" bg-daintree-950/80 h-screen px-10">
             <div className="container mx-auto">
-              <nav className="top-bar py-5 border-b border-slate-600 flex justify-between items-center">
-                <Image
-                  src={"/svg/logo-gold.svg"}
-                  width={200}
-                  height={200}
-                  alt={"Legality logo"}
-                />
-                <div className="ctas flex gap-8 items-center">
-                  <div className="cart-container flex items-center gap-3">
-                    <Image
-                      src={"/images/cart-icon.png"}
-                      width={30}
-                      height={30}
-                      alt={"CartIcon"}
-                    />
-                    <span>Tu Carrito (0)</span>
-                  </div>
-                  <button className="py-5 px-8 bg-white/10">
-                    Agenda una Cita
-                  </button>
-                </div>
-              </nav>
-              <nav className="navbar flex items-center py-5 border-b border-slate-600">
-                <div className="navs flex w-1/2 justify-between">
-                  {navbarNavs.map((nav) => (
-                    <Link
-                      href={nav.href}
-                      key={nav.name}
-                      className="nav text-xl"
-                    >
-                      {nav.name}
-                    </Link>
-                  ))}
-                </div>
-                <div className="ctas flex w-1/2 justify-end gap-10">
-                  <div className="cta flex gap-2">
-                    <Image
-                      src={"/images/phone-icon.png"}
-                      className="icon"
-                      width={50}
-                      height={50}
-                      alt={"phone-icon"}
-                    />
-                    <div className="cta-content ">
-                      <span className="label text-yellow-500 text-sm ">
-                        Llámanos Al:
-                      </span>
-                      <p className="text leading-none text-lg">
-                        +507 6226-6183
-                      </p>
-                    </div>
-                  </div>
-                  <div className="cta flex gap-2">
-                    <Image
-                      src={"/images/email-icon.png"}
-                      className="icon"
-                      width={50}
-                      height={50}
-                      alt={"phone-icon"}
-                    />
-                    <div className="cta-content ">
-                      <span className="label text-yellow-500 text-sm ">
-                        Escríbenos al Correo:
-                      </span>
-                      <p className="text leading-none text-lg">
-                        legality.pa@gmail.com
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </nav>
+              <Topbar />
+              <Navbar />
               {children}
             </div>
           </div>
