@@ -4,15 +4,15 @@ import CTA from "./cta";
 
 export default function Navbar() {
   return (
-    <nav className="navbar flex items-center py-5 border-b border-slate-600">
-      <div className="navs flex w-1/2 justify-between">
+    <nav className="navbar flex items-center flex-wrap  border-b border-slate-600">
+      <div className="navs flex w-1/2 min-w-[512px] my-5 mx-auto  justify-between">
         {navbarNavs.map((nav) => (
           <Link href={nav.href} key={nav.name} className="nav text-xl">
             {nav.name}
           </Link>
         ))}
       </div>
-      <div className="ctas flex w-1/2 justify-end gap-10">
+      <div className="ctas flex w-1/2 min-w-[512px] my-5 mx-auto justify-end gap-10">
         <CTA
           ctaRef="tel:+50762266183"
           iconUrl="/images/phone-icon.png"

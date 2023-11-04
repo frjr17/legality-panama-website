@@ -6,7 +6,7 @@ import { useState } from "react";
 function MobileTopbar(props: { toggleBar: boolean; setToggleBar(): void }) {
   return (
     <nav
-      className={`top-bar py-5 border-b border-slate-600 flex justify-between items-center`}
+      className={`top-bar py-5 border-b border-slate-600 flex md:hidden  justify-between items-center`}
     >
       <div className=""></div>
       <div className="">

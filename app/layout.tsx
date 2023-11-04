@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Topbar from "./components/topbar";
-import Navbar from "./components/navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,20 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div
-          className="banner h-screen bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/banner-photo.png)" }}
-        >
-          <div className=" bg-daintree-950/80 h-screen px-10">
-            <div className="container mx-auto">
-              <Topbar />
-              <Navbar />
-              {children}
-            </div>
-          </div>
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

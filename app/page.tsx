@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="banner flex h-[30rem]">
-      <div className="content flex flex-col gap-6 my-auto justify-center w-1/2 pr-40">
+    <div className="banner flex h-screen md:h-[30rem]">
+      <div className="content flex flex-col md:gap-6 gap-12 my-auto mdjustify-center md:items-start items-center w-full md:w-1/2 text-center md:pr-40">
         <Image
-          className="decor"
+          className="decor hidden md:block"
           src={"/images/banner-decor.png"}
           width={75}
           height={75}
@@ -22,7 +22,7 @@ export default function Home() {
           Agenda tu Cita con Nosotros
         </button>
       </div>
-      <div className="w-1/2 flex justify-center items-end h-full">
+      <div className="w-1/2 hidden md:flex justify-center items-end h-full">
         <Image
           className="decor w-fit h-fit"
           src={"/images/banner-decor.png"}
