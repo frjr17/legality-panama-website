@@ -1,10 +1,13 @@
+"use client";
 import { navbarNavs } from "@/app/lib";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [showMobileNav, setShowMobileNav] = useState(false);
   return (
-    <div className="md:container md:mx-auto sticky top-0 left-0 navbar text-white">
+    <div className="md md:container md:mx-auto sticky top-0 left-0 navbar text-white">
       <nav className="top hidden md:flex justify-between border-b border-slate-600 py-6">
         <Image
           src="/svg/logo-gold.svg"
@@ -72,6 +75,53 @@ export default function Navbar() {
             </div>
           </Link>
         </div>
+      </nav>
+      <MobileNavbar
+        showMobileNav={showMobileNav}
+        setShowMobileNav={() => setShowMobileNav(!showMobileNav)}
+      />
+    </div>
+  );
+}
+
+function MobileNavbar(props: {
+  showMobileNav: boolean;
+  setShowMobileNav: () => void;
+}) {
+  return (
+    <div className="sticky top-0 left-0 navbar text-white px-5">
+      <nav className="relative border-b border-slate-600 py-6 flex">
+        <div className="w-[40px]"></div>
+        <Image
+          className="mx-auto"
+          src="/svg/logo-gold.svg"
+          alt={"Legality Logo"}
+          width={175}
+          height={175}
+        />
+
+        <Image
+          onClick={props.setShowMobileNav}
+          src="/svg/bars.svg"
+          className=""
+          alt={"navbar"}
+          width={30}
+          height={30}
+        />
+      </nav>
+      <nav
+        className={`w-screen h-screen ${
+          props.showMobileNav ? "block" : "hidden"
+        } bg-daintree-950 fixed top-0 left-0`}
+      >
+        <Image
+          onClick={props.setShowMobileNav}
+          src="/svg/close-icon.svg"
+          className="absolute right-5 top-10"
+          alt={"navbar"}
+          width={30}
+          height={30}
+        />
       </nav>
     </div>
   );
