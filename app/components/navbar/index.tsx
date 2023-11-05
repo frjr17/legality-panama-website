@@ -89,7 +89,7 @@ function MobileNavbar(props: {
   setShowMobileNav: () => void;
 }) {
   return (
-    <div className="sticky top-0 left-0 navbar text-white px-5">
+    <div className="sticky top-0 left-0 navbar text-white md:hidden block">
       <nav className="relative border-b border-slate-600 py-6 flex">
         <div className="w-[40px]"></div>
         <Image
