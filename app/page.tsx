@@ -3,14 +3,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="md:container md:mx-auto">
-      <div
-        className="background opacity-20 absolute top-0 left-0 w-screen h-screen z-[-1]"
-        style={{
-          background: "url(/images/banner-photo.png)",
-          backgroundSize: "cover",
-        }}
-      ></div>
       <div className="banner mt-[-50px] md:mt-10 flex items-center h-screen md:h-fit">
+        <div
+          className="background opacity-20 absolute top-0 left-0 w-screen h-screen z-[-1]"
+          style={{
+            background: "url(/images/banner-photo.png)",
+            backgroundSize: "cover",
+          }}
+        ></div>
         <div className="text-part flex flex-col gap-10 w-full text-center md:text-left md:w-1/2">
           <div className="decor hidden md:block">
             <Image
@@ -34,6 +34,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <div className=""></div>
     </div>
   );
 }
