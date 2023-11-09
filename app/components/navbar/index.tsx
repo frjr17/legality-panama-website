@@ -34,15 +34,15 @@ export function CTA(props: ICTAProps) {
 export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(true);
   return (
-    <div className="md md:container md:mx-auto sticky top-0 left-0 navbar text-white">
-      <nav className="top hidden md:flex justify-between border-b border-slate-600 py-6">
+    <div className="lg:container lg:mx-auto sticky top-0 left-0 navbar text-white">
+      <nav className="top hidden lg:flex flex-wrap justify-between border-b border-slate-600 py-6">
         <Image
           src="/svg/logo-gold.svg"
           alt={"Legality Logo"}
           width={175}
           height={175}
         />
-        <div className="ctas flex gap-8 items-center">
+        <div className="ctas mt-6 flex gap-8 items-center">
           <div className="cart">
             <div className="cart-icon flex items-center gap-4">
               <Image
@@ -57,7 +57,7 @@ export default function Navbar() {
           <button className="bg-white/30 px-7 py-4">Agenda una Cita</button>
         </div>
       </nav>
-      <nav className="bottom hidden md:flex justify-between items-center border-b border-slate-600 py-4">
+      <nav className="bottom hidden lg:flex flex-wrap justify-between items-center border-b border-slate-600 py-4">
         <div className="navs flex w-1/2 justify-between">
           {navbarNavs.map((nav) => {
             return (
@@ -97,7 +97,7 @@ function MobileNavbar(props: {
   setShowMobileNav: () => void;
 }) {
   return (
-    <div className="sticky top-0 left-0 navbar text-white md:hidden block">
+    <div className="sticky top-0 left-0 navbar text-white lg:hidden block">
       <nav className="relative border-b border-slate-600 py-6 flex">
         <div className="w-[40px]"></div>
         <Image
