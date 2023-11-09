@@ -34,7 +34,7 @@ export function CTA(props: ICTAProps) {
 export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(true);
   return (
-    <div className="lg:container lg:mx-auto sticky top-0 left-0 navbar text-white">
+    <div className="w-full px-5 xl:px-32 fixed top-0 left-0 navbar text-white">
       <nav className="top hidden lg:flex flex-wrap justify-between border-b border-slate-600 py-6">
         <Image
           src="/svg/logo-gold.svg"
