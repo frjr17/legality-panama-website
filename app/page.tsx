@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="md:container  md:mx-auto">
-      <div className="banner pt-[205px] flex items-center h-screen">
+    <main className="md:container  md:mx-auto">
+      <section className="banner pt-[205px] flex items-center h-screen">
         <div
           className="background opacity-20 absolute top-0 left-0 w-full h-screen z-[-1]"
           style={{
@@ -42,8 +42,8 @@ export default function Home() {
             alt="Decor"
           />
         </div>
-      </div>
-      <div className="about h-screen  pt-[205px]  flex gap-10 md:container md:mx-auto justify-center items-center">
+      </section>
+      <section className="about h-screen  pt-[205px]  flex gap-10 md:container md:mx-auto justify-center items-center">
         <div className="pictures w-1/3 flex flex-col justify-center gap-16">
           <Image
             className=""
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="w-52 h-16 bg-yellow-500"></div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
